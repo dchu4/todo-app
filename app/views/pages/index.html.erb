@@ -1,0 +1,13 @@
+<div ng-app="app">
+  {{ 1 + 1 }}
+  <div ng-controller="todoController">
+
+  <li ng-class="{strike: task.complete}" ng-click="toggleComplete(task)" ng-repeat="task in tasks track by $index">{{task.taskName}}</li>
+
+  <input ng-model="addNewTask">
+  <button ng-click="addTask(addNewTask)">Add Task</button>
+  <button ng-click="deleteComplete()">Clear Complete</button>
+  <p>{{ incompleteTasks() }}</p>
+  </div>
+
+</div>
