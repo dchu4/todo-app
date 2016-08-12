@@ -50,6 +50,14 @@
       }
     }
 
+    $scope.showActive = function(task){
+      return !task.complete;
+    }
+
+    $scope.showComplete = function(){
+      
+    }
+
   });
 
 }());
